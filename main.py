@@ -1,14 +1,15 @@
-from PyQt6.QtWidgets import QApplication, QWidget
 import sys
 
-def main():
-    app = QApplication(sys.argv)
+from PyQt6.QtOpenGLWidgets import QOpenGLWidget
+from PyQt6.QtWidgets import QApplication, QWidget
 
-    window = QWidget()
-    window.setWindowTitle("PyQt6 Template")
-    window.show()
 
-    sys.exit(app.exec())
+class Window(QWidget):
+    def __init__(self):
+        super().__init__()
 
 if __name__ == "__main__":
-    main()
+    app = QApplication(sys.argv)
+    window = Window()
+    window.show()
+    sys.exit(app.exec())
